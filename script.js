@@ -1,6 +1,5 @@
 const button = document.getElementById("selector-bar");
 button.addEventListener('click', togglePayment);
-button.addEventListener('keydown', handleKeydown);
 
 function togglePayment() {
   var monthPayment = document.getElementsByTagName("h3");
@@ -16,12 +15,5 @@ function togglePayment() {
       yearPayment[i].style.display = "block";
       button.style.justifyContent = "flex-start";
     }
-  }
-}
-
-function handleKeydown(event) {
-  if (event.code === "Enter" || event.code === "Space") {
-    togglePayment();
-    event.preventDefault();
   }
 }
